@@ -14,22 +14,22 @@ Example configuration for authentication ASP.NET framework with Notakey Authenti
 
 * Run image
 
-```shell
-docker run -it --rm \
-  -p 5002:5000 \
-  -p 5003:5001 \
-  --name my-oidc-client \
-  -e OIDC_CLIENT_ID="dcd...a21" \
-  -e OIDC_CLIENT_SECRET="CWH...sEM" \
-  -e OIDC_AUTHORITY="https://<ntkas-api-url>/oidc/services/<service-id>/" \
-  mybuiltimage
-```
+    ```shell
+    docker run -it --rm \
+    -p 5002:5000 \
+    -p 5003:5001 \
+    --name my-oidc-client \
+    -e OIDC_CLIENT_ID="dcd...a21" \
+    -e OIDC_CLIENT_SECRET="CWH...sEM" \
+    -e OIDC_AUTHORITY="https://<ntkas-api-url>/oidc/services/<service-id>/" \
+    mybuiltimage
+    ```
 
-    * OIDC_CLIENT_ID - This is the client ID generated during client configuration in step 1.
+   OIDC_CLIENT_ID - This is the client ID generated during client configuration in step 1.
 
-    * OIDC_CLIENT_SECRET - This is the client secret generated during client configuration in step 1.
+   OIDC_CLIENT_SECRET - This is the client secret generated during client configuration in step 1.
 
-    * OIDC_AUTHORITY - OpenID Connect server's base URL. \<ntkas-api-url\> is FQDN you have configured for Notakey Authentication Server, \<service-id\> identifies service  to bind this client application to in your domain, can be found in service settings in management dashboard.
+   OIDC_AUTHORITY - OpenID Connect server's base URL. \<ntkas-api-url\> is FQDN you have configured for Notakey Authentication Server, \<service-id\> identifies service  to bind this client application to in your domain, can be found in service settings in management dashboard.
 
 * Try out access to https://localhost:5001 and ignore HTTP SSL error. If certificate needs to be added to trust store, it can be found in `/certs`
 
