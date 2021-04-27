@@ -10,7 +10,7 @@ Example configuration for authentication ASP.NET framework with Notakey Authenti
 
 <!-- ![OIDC client config](images/oidc_client_config.png) -->
 
-* Build image with `docker build ./ -t mybuiltimage`
+* Clone this repo and build image with `docker build ./ -t mybuiltimage`
 
 * Run image
 
