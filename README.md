@@ -25,11 +25,11 @@ docker run -it --rm \
   mybuiltimage
 ```
 
-* * OIDC_CLIENT_ID - This is the client ID generated during client configuration in step 1.
+  * OIDC_CLIENT_ID - This is the client ID generated during client configuration in step 1.
 
-* * OIDC_CLIENT_SECRET - This is the client secret generated during client configuration in step 1.
+  * OIDC_CLIENT_SECRET - This is the client secret generated during client configuration in step 1.
 
-* * OIDC_AUTHORITY - OpenID Connect server's base URL. \<ntkas-api-url\> is FQDN you have configured for Notakey Authentication Server, \<service-id\> identifies service  to bind this client application to in your domain, can be found in service settings in management dashboard.
+  * OIDC_AUTHORITY - OpenID Connect server's base URL. \<ntkas-api-url\> is FQDN you have configured for Notakey Authentication Server, \<service-id\> identifies service  to bind this client application to in your domain, can be found in service settings in management dashboard.
 
 * Try out access to https://localhost:5001 and ignore HTTP SSL error. If certificate needs to be added to trust store, it can be found in `/certs`
 
