@@ -39,20 +39,29 @@ namespace NotakeyOidcDemo
                 options.Authority = Environment.GetEnvironmentVariable("OIDC_AUTHORITY");
                 options.RequireHttpsMetadata = true;
                 options.ClientId = Environment.GetEnvironmentVariable("OIDC_CLIENT_ID");
-                options.ClientSecret = Environment.GetEnvironmentVariable("OIDC_CLIENT_SECRET");
                 // options.CallbackPath = "/oidc/callback";
-                options.ResponseType = OpenIdConnectResponseType.Code;
-                options.GetClaimsFromUserInfoEndpoint = true;
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
                 options.SaveTokens = true;
-                options.UsePkce = false;
+
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     NameClaimType = "name",
                     RoleClaimType = "groups",
                     ValidateIssuer = true
                 };
+
+                // authorization code flow
+                // options.ClientSecret = Environment.GetEnvironmentVariable("OIDC_CLIENT_SECRET");
+                // options.GetClaimsFromUserInfoEndpoint = true;
+                // options.ResponseType = OpenIdConnectResponseType.Code;
+                // options.UsePkce = false;
+
+                // implicit id_token flow
+                options.ResponseType = OpenIdConnectResponseType.IdToken;
+                options.GetClaimsFromUserInfoEndpoint = false;
+                options.UsePkce = true;
+
             });
 
             services.AddAuthorization();
