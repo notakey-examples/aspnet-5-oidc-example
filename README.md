@@ -16,8 +16,8 @@ Example configuration for authentication ASP.NET framework with Notakey Authenti
 
     ```shell
     docker run -it --rm \
-    -p 5002:5000 \
-    -p 5003:5001 \
+    -p 5000:5000 \
+    -p 5001:5001 \
     --name my-oidc-client \
     -e OIDC_CLIENT_ID="dcd...a21" \
     -e OIDC_CLIENT_SECRET="CWH...sEM" \
