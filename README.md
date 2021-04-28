@@ -6,7 +6,7 @@ Example configuration for authentication ASP.NET framework with Notakey Authenti
 
 * Enable OpenID Connect Server for your Notakey service using management dashboard. Choose service, navigate to Settings >> OpenID Connect configuration >> Configure and enable service there.
 
-* Register this client application with Notakey service. To add client choose service, navigate to Settings >> OpenID Connect configuration >> Clients. Your callback URL will be https://localhost:5001/signin-oidc
+* Register this client application with Notakey service. To add client choose service, navigate to Settings >> OpenID Connect configuration >> Clients. Your redirect URI for client configuration will be https://localhost:5001/signin-oidc
 
 <!-- ![OIDC client config](images/oidc_client_config.png) -->
 
