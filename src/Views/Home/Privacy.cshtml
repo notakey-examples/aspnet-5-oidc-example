@@ -4,3 +4,25 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>This page is only accessible by authenticated users.</p>
+
+@{
+    var roleGroup = "Domain Users";
+}
+@if (User.IsInRole(roleGroup))
+{
+    <h3>This user is a member of @(roleGroup)</h3>
+}
+else
+{
+    <h3>This user is NOT a member of @(roleGroup)</h3>
+}
+
+<p>All issued claims shown below:</p>
+
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt><b>@claim.Type</b></dt>
+        <dd> @claim.Value</dd>
+    }
+</dl>
